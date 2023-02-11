@@ -44,11 +44,26 @@ public class Main {
         displayOutput(a, b, c, '+');
     }
 
-    public static String displayOutput(double a, double b, double c, char sign) {
-//        if (d == (long) d)
-//            return String.format("%d", (long) d);
-//        else
-//            return String.format("%s", d);
+    public static void displayOutput(double a, double b, double c, char sign) {
+        String output = "";
+        if (a == (long) a) {
+            output += String.format("%d", (long) a);
+        } else {
+            output += String.format("%s", a);
+        }
+        output += " " + sign + " ";
+        if (b == (long) b) {
+            output += String.format("%d", (long) b);
+        } else {
+            output += String.format("%s", b);
+        }
+        output += " = ";
+        if (c == (long) c) {
+            output += String.format("%d", (long) c);
+        } else {
+            output += String.format("%s", c);
+        }
+        System.out.println(output);
     }
 }
 
