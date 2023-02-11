@@ -6,9 +6,10 @@ public class Main {
 
         switch (menuSelection) {
             case 1:
-                add();
+                System.out.println(add());
                 return;
             case 2:
+                System.out.println(subtract());
                 return;
             case 3:
                 return;
@@ -34,17 +35,26 @@ public class Main {
         return (input.nextInt());
     }
 
-    public static void add() {
+    public static String add() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the first digit.");
         double a = input.nextDouble();
         System.out.println("Enter the second digit.");
         double b = input.nextDouble();
         double c = a + b;
-        displayOutput(a, b, c, '+');
+        return (displayOutput(a, b, c, '+'));
+    }
+    public static String subtract() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first digit.");
+        double a = input.nextDouble();
+        System.out.println("Enter the second digit.");
+        double b = input.nextDouble();
+        double c = a - b;
+        return (displayOutput(a, b, c, '-'));
     }
 
-    public static void displayOutput(double a, double b, double c, char sign) {
+    public static String displayOutput(double a, double b, double c, char sign) {
         String output = "";
         if (a == (long) a) {
             output += String.format("%d", (long) a);
@@ -63,7 +73,7 @@ public class Main {
         } else {
             output += String.format("%s", c);
         }
-        System.out.println(output);
+        return output;
     }
 }
 
