@@ -35,4 +35,19 @@ public class UserInterface {
         }
         System.out.println(output);
     }
+    public static void displayOutput(double a, double c) {
+        String output = "";
+        if (a == (long) a) {
+            output += String.format("%d", (long) a);
+        } else {
+            output += String.format("%s", a);
+        }
+        output += " squared is ";
+        if (c == (long) c) {
+            output += String.format("%d", (long) c);
+        } else {
+            output += String.format("%s", c);
+        }
+        System.out.println(output);
+    }
 }
