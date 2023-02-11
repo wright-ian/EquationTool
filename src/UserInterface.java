@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class UserInterface {
     public static int displayMenu() {
         System.out.println(" ");
@@ -11,29 +9,7 @@ public class UserInterface {
         System.out.println("5. Square a number");
         System.out.println("6. Find the square root of a number");
         System.out.println("7. Quit");
-        return (validateInt());
-    }
-
-    public static int validateInt() {
-        Scanner input = new Scanner(System.in);
-        int number;
-        while (!input.hasNextInt()) {
-            System.out.println("Enter an integer!");
-            input.next();
-        }
-        number = input.nextInt();
-        return number;
-    }
-
-    public static double validateDouble() {
-        Scanner input = new Scanner(System.in);
-        double number;
-        while (!input.hasNextDouble()) {
-            System.out.println("Invalid entry, try again!");
-            input.next();
-        }
-        number = input.nextDouble();
-        return number;
+        return (Validation.validateInt());
     }
 
     public static void displayOutput(double a, double b, double c, char sign) {
