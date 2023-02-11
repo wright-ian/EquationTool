@@ -3,13 +3,15 @@ import java.util.Scanner;
 public class UserInterface {
     public static int displayMenu() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Select one of the following equations. To select the equation, enter the corresponding number.");
+        System.out.println(" ");
+        System.out.println("Choose an option by entering a number between 1 and 7:");
         System.out.println("1. Add two numbers");
         System.out.println("2. Subtract two numbers");
         System.out.println("3. Multiply two numbers");
         System.out.println("4. Divide two numbers");
         System.out.println("5. Square a number");
         System.out.println("6. Find the square root of a number");
+        System.out.println("7. Quit");
         return (input.nextInt());
     }
 
