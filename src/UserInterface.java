@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class UserInterface {
     public static int displayMenu() {
-        Scanner input = new Scanner(System.in);
         System.out.println(" ");
         System.out.println("Choose an option by entering a number between 1 and 7:");
         System.out.println("1. Add two numbers");
@@ -12,7 +11,29 @@ public class UserInterface {
         System.out.println("5. Square a number");
         System.out.println("6. Find the square root of a number");
         System.out.println("7. Quit");
-        return (input.nextInt());
+        return (validateInt());
+    }
+
+    public static int validateInt() {
+        Scanner input = new Scanner(System.in);
+        int number;
+        while (!input.hasNextInt()) {
+            System.out.println("Enter an integer!");
+            input.next();
+        }
+        number = input.nextInt();
+        return number;
+    }
+
+    public static double validateDouble() {
+        Scanner input = new Scanner(System.in);
+        double number;
+        while (!input.hasNextDouble()) {
+            System.out.println("Invalid entry, try again!");
+            input.next();
+        }
+        number = input.nextDouble();
+        return number;
     }
 
     public static void displayOutput(double a, double b, double c, char sign) {

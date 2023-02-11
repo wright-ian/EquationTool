@@ -11,7 +11,7 @@ public class Main {
                 case 5 -> CalculatorFunction.square();
                 case 6 -> CalculatorFunction.squareRoot();
                 case 7 -> programIsRunning = false;
-                default -> System.out.println("Invalid Selection!");
+                default -> System.out.println("Integer must be between 1 and 7!");
             }
         }
         System.out.println("Goodbye!");
