@@ -13,7 +13,6 @@ public class UserInterface {
         return (input.nextInt());
     }
 
-
     public static void displayOutput(double a, double b, double c, char sign) {
         String output = "";
         if (a == (long) a) {
